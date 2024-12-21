@@ -7,6 +7,8 @@
 
 <!-- BOOTSTRAP -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<!--LOCOMOTIVE-->
+<link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" rel="stylesheet">
 
 <!-- FONT -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,48 +18,163 @@
 
 <!-- J QUERY -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   
+<script src="https://kit.fontawesome.com/37abfb8e17.js" crossorigin="anonymous"></script>
 <!-- CUSTOM CSS -->
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/locomotive-scroll.css">
    
 </head>
 
-
 <body>
+    <!-- Scroll Container -->
+    <main data-scroll-container>
+        <!-- Section 1 -->
+        <section class="hero" data-scroll-section>
+            <div class="position-relative w-100 h-100">
+                <video src="media/video1.mp4" autoplay muted loop class="hero-video"></video>
+                <video src="media/video2.mp4" autoplay muted loop class="hero-video d-none"></video>
+                <video src="media/video3.mp4" autoplay muted loop class="hero-video d-none"></video>
+            </div>
+            <div class="hero-content text-center text-white position-absolute top-50 start-50 translate-middle">
+                <h1 class="fw-bold">FLAX</h1>
+                <h1 class="fw-bold">AND</h1>
+                <h1 class="fw-bold">KALE</h1>
+            </div>
+        </section>
 
-<!-- HERO -->
-<div class="hero position-relative overflow-hidden">
-    <!-- Videos -->
-    <div class="position-relative w-100 h-100">
-        <video src="media/video1.mp4" autoplay muted loop class="hero-video w-100 h-100 position-absolute top-50 start-50 translate-middle zoom"></video>
-        <video src="media/video2.mp4" autoplay muted loop class="hero-video w-100 h-100 position-absolute top-50 start-50 translate-middle d-none"></video>
-        <video src="media/video3.mp4" autoplay muted loop class="hero-video w-100 h-100 position-absolute top-50 start-50 translate-middle d-none"></video>
+        <!-- Section 2 -->
+        <section class="section2" data-scroll-section>
+            <div class="scroll-text" data-scroll data-scroll-direction="horizontal" data-scroll-speed="6">
+                SHOP SOUCE
+            </div>
+            <div class="scroll-text" data-scroll data-scroll-direction="horizontal" data-scroll-speed="4" style="top: 20%;">
+                SHOP SOUCE
+            </div>
+            <div class="scroll-text" data-scroll data-scroll-direction="horizontal" data-scroll-speed="2" style="top: 60%;">
+                SHOP SOUCE - SHOP SOUCE - SHOP SOUCE - SHOP SOUCE - SHOP SOUCE - SHOP SOUCE - SHOP SOUCE 
+            </div>
+           
+        </section>
+
+        <!-- Section 3 -->
+        <section class="section1 py-5" data-scroll-section>
+            <div class="container-fluid">
+                <div class="scroll-container" data-scroll data-scroll-direction="horizontal" data-scroll-speed="2">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">John Doe</h5>
+                                <div>
+                                    <p class="card-text">The Kombucha is amazing! It has a perfect balance of sweetness and tartness. Definitely buying again.</p>
+                                    <div class="rating">
+                                        ★★★★★
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Jane Smith</h5>
+                                <div>
+                                    <p class="card-text">Great taste and super refreshing! I love the variety of flavors available.</p>
+                                    <div class="rating">
+                                        ★★★★☆
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Michael Lee</h5>
+                                <div>
+                                    <p class="card-text">Good kombucha, but I wish the bottle was bigger. Overall, a great drink for summer!</p>
+                                    <div class="rating">
+                                        ★★★★☆
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Michael Lee</h5>
+                                <div>
+                                    <p class="card-text">Good kombucha, but I wish the bottle was bigger. Overall, a great drink for summer!</p>
+                                    <div class="rating">
+                                        ★★★★☆
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Michael Lee</h5>
+                                <div>
+                                    <p class="card-text">Good kombucha, but I wish the bottle was bigger. Overall, a great drink for summer!</p>
+                                    <div class="rating">
+                                        ★★★★☆
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Michael Lee</h5>
+                                <div>
+                                    <p class="card-text">Good kombucha, but I wish the bottle was bigger. Overall, a great drink for summer!</p>
+                                    <div class="rating">
+                                        ★★★★☆
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <button id="menuToggle" class="menu-button">☰</button>
+        <button class="cart-button">Add to Cart</button>
     </div>
-  
-    <!-- Content -->
-<div class="hero-content d-flex flex-column justify-content-center align-items-center position-absolute top-50 start-50 translate-middle text-center text-white">
-    <h1 class="fw-bold">FLAX</h1>
-    <h1 class="fw-bold">AND</h1>
-    <h1 class="fw-bold">KALE</h1>
-</div>
 
-    
-
-<!-- MENU -->
-    <div class="menu-button-container position-absolute bottom-40 start-50 translate-middle-x">
-        <button type="button" class="btn btn-warning btn-lg rounded-pill fw-bold">
-            MENU
-        </button>
+    <!-- Slide-Up Menu -->
+    <div id="slideMenu" class="slide-menu">
+        <button id="closeMenu" class="close-button">✕</button>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
     </div>
-</div>
-    
+
+    <!-- Overlay -->
+    <div id="menuOverlay" class="menu-overlay"></div>
+    </main>
 
 
-<!-- BOOSTRAP JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- LOCOMOTIVE SCROLL JS -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="js/script.js"></script>
 
-<!-- CUSTOM JS -->
-<script src="js/script.js"></script>
+    <script src="js/librerias.js"></script>
+    <script src="js/locomotive-scroll.min.js"></script>
 
 </body>
 </html>

@@ -1,13 +1,24 @@
-// HERO
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menuToggle');
+  const closeMenu = document.getElementById('closeMenu');
+  const slideMenu = document.getElementById('slideMenu');
+  const menuOverlay = document.getElementById('menuOverlay');
 
- const videos = document.querySelectorAll('.hero-video');
-  let currentVideo = 0;
+  // Open Menu
+  menuToggle.addEventListener('click', () => {
+      slideMenu.classList.add('active');
+      menuOverlay.classList.add('active');
+  });
 
-  function switchVideo() {
-    videos[currentVideo].classList.add('d-none'); // Oculta el video actual
-    currentVideo = (currentVideo + 1) % videos.length; // Avanza al siguiente
-    videos[currentVideo].classList.remove('d-none'); // Muestra el siguiente
-  }
+  // Close Menu
+  closeMenu.addEventListener('click', () => {
+      slideMenu.classList.remove('active');
+      menuOverlay.classList.remove('active');
+  });
 
-  // Cambia de video cada 10 segundos
-  setInterval(switchVideo, 10000);
+  // Close Menu on Overlay Click
+  menuOverlay.addEventListener('click', () => {
+      slideMenu.classList.remove('active');
+      menuOverlay.classList.remove('active');
+  });
+});
