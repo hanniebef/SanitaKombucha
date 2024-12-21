@@ -12,17 +12,21 @@
  setInterval(switchVideo, 10000);
 
 
- // LOCOMOTIVE
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true,
-    direction: 'diagonal',
+ document.addEventListener("DOMContentLoaded", () => {
+    // Initialize Locomotive Scroll
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+        direction: 'vertical', // Ensure vertical scrolling
+    });
+
+    // Log scroll events (optional)
+    scroll.on('scroll', (args) => {
+        console.log('Scroll position:', args.scroll);
+    });
 });
 
-// Optional: Log the scroll position
-scroll.on('scroll', (args) => {
-    console.log('Scroll position:', args.scroll.y);
-});
+
 
 
 
