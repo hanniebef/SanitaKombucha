@@ -190,6 +190,103 @@ section {
     background-color: white;
     color: black;
 }
+
+/* General settings for the section */
+.product-section {
+    background-color: #FFD700; /* Fondo amarillo */
+    color: black; /* Texto negro */
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Imagen del producto */
+.rounded {
+    max-width: 78%;
+    border-radius: 10px;
+    transition: transform 0.8s ease-out;
+}
+
+.rounded.in-view {
+    transform: scale(1.05); /* Zoom cuando aparece */
+}
+
+/* Animaciones generales para el texto */
+.product-title,
+.product-subtitle,
+.product-description,
+.rating {
+    opacity: 0;
+    transform: translateY(20px); /* Aparece desde abajo */
+    transition: all 0.6s ease-out;
+}
+
+.in-view {
+    opacity: 1;
+    transform: translateY(0); /* Llega a su posición original */
+}
+
+/* Estilo del título */
+.product-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Subtítulo del producto */
+.product-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Precio */
+.product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.vat-text {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+/* Rating */
+.rating {
+    font-size: 1.2rem;
+    color: black; /* Estrellas negras */
+    margin-bottom: 15px;
+}
+
+.reviews {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+/* Descripción */
+.product-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Botón */
+.explore-btn {
+    border: 2px solid black;
+    color: black;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+
 /* Bottom Navigation */
 .bottom-nav {
     position: fixed;

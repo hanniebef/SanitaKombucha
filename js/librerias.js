@@ -24,6 +24,12 @@
     scroll.on('scroll', (args) => {
         console.log('Scroll position:', args.scroll);
     });
+
+    scroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+        direction: 'vertical'
+    });
 });
 
 
