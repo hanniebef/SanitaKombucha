@@ -4,15 +4,19 @@
  let currentVideo = 0;
 
  function switchVideo() {
-     videos[currentVideo].classList.add('d-none');
+     videos[currentVideo].classList.add('active');
      currentVideo = (currentVideo + 1) % videos.length;
-     videos[currentVideo].classList.remove('d-none');
+     videos[currentVideo].classList.remove('active');
  }
 
  setInterval(switchVideo, 10000);
 
+ 
+
 
  document.addEventListener("DOMContentLoaded", () => {
+
+    
     // Initialize Locomotive Scroll
     const scroll = new LocomotiveScroll({
         el: document.querySelector('[data-scroll-container]'),
