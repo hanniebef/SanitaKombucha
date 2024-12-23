@@ -45,22 +45,100 @@ section {
     object-fit: cover;
     width: 100%;
     height: 100%;
+    z-index: 1;
 }
 
-.hero-video.zoom {
-    transform: translate(-50%, -50%) scale(1.05);
+.hero-content {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 3em;
 }
 
 .hero-content h1 {
-    font-size: 15rem;
-    margin-top: -170px;
-    /* font-weight: 500; */
-    line-height: 1.5;
+    font-size: 12rem;
+    margin: 0;
+    line-height: 1.1;
 }
 
 /* MENU */
-/* Bottom Navigation */
-.bottom-nav {
+
+.menu-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.menu-button {
+    background-color:  #FFD700;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 200px;
+    text-align: center;
+}
+
+.menu-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Slide-Up Menu */
+.slide-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+    transform: translateY(100%);
+    transition: transform 0.3s;
+    z-index: 20;
+    padding: 20px;
+}
+
+.slide-menu.open {
+    transform: translateY(0);
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 15;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+/* .bottom-nav {
     position: fixed;
     z-index: 1;
     bottom: 0;
@@ -142,7 +220,6 @@ section {
     color: #ff7e5f;
 }
 
-/* Overlay */e
 .menu-overlay {
     position: fixed;
     top: 0;
@@ -154,7 +231,7 @@ section {
 }
 .menu-overlay.active {
     display: block;
-}
+} */
 
 
 .section2 {
