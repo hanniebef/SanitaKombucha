@@ -58,6 +58,104 @@ section {
     line-height: 1.5;
 }
 
+/* MENU */
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: #222;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu-button, .cart-button {
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.menu-button:hover, .cart-button:hover {
+    color: #ff7e5f;
+}
+
+/* Slide-Up Menu */
+.slide-menu {
+    position: fixed;
+    bottom: -300px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.slide-menu.active {
+    bottom: 15%;
+}
+
+.slide-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.slide-menu ul li {
+    margin: 10px 0;
+}
+
+.slide-menu ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #222;
+    transition: all 0.3s;
+}
+
+.slide-menu ul li a:hover {
+    color: #ff7e5f;
+}
+
+.close-button {
+    font-size: 1.5rem;
+    color: #222;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.close-button:hover {
+    color: #ff7e5f;
+}
+
+/* Overlay */e
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    display: none;
+}
+.menu-overlay.active {
+    display: block;
+}
+
 
 .section2 {
     background: white;;
@@ -287,99 +385,9 @@ section {
 
 
 
-/* Bottom Navigation */
-.bottom-nav {
-    position: fixed;
-    z-index: 1;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 30px;
-    background-color: #222;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
-}
 
-.menu-button, .cart-button {
-    font-size: 1.5rem;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s;
-}
 
-.menu-button:hover, .cart-button:hover {
-    color: #ff7e5f;
-}
-
-/* Slide-Up Menu */
-.slide-menu {
-    position: fixed;
-    bottom: -300px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 500px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    text-align: center;
-    transition: all 0.5s;
-}
-
-.slide-menu.active {
-    bottom: 15%;
-}
-
-.slide-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-}
-
-.slide-menu ul li {
-    margin: 10px 0;
-}
-
-.slide-menu ul li a {
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: #222;
-    transition: all 0.3s;
-}
-
-.slide-menu ul li a:hover {
-    color: #ff7e5f;
-}
-
-.close-button {
-    font-size: 1.5rem;
-    color: #222;
-    background: none;
-    border: none;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.close-button:hover {
-    color: #ff7e5f;
-}
-
-/* Overlay */
-.menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 998;
-    display: none;
-}
-.menu-overlay.active {
-    display: block;
+model-viewer {
+    width: 400px; /* Ajusta según el tamaño deseado */
+    height: 400px;
 }

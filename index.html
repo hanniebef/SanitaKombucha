@@ -48,10 +48,10 @@
                 EXPLORE IN STYLE - EXPLORE IN STYLE - EXPLORE IN STYLE - EXPLORE IN STYLE - EXPLORE IN STYLE - EXPLORE IN STYLE - EXPLORE IN STYLE - EXPLORE IN STYLE
             </div>
             <div class="scroll-text" data-scroll data-scroll-direction="horizontal" data-scroll-speed="7" style="top: 20%;">
-                KAMBUCHA - KAMBUCHA - KAMBUCHA - KAMBUCHA - KAMBUCHA - KAMBUCHA - KAMBUCHA - KAMBUCHA - KAMBUCHA - KAMBUCHA - KAMBUCHA - KAMBUCHA - KAMBUCHA - KAMBUCHA
+                KOMBUCHA - KOMBUCHA - KOMBUCHA - KOMBUCHA - KOMBUCHA - KOMBUCHA - KOMBUCHA - KOMBUCHA - KOMBUCHA - KOMBUCHA - KOMBUCHA - KOMBUCHA - KOMBUCHA - KOMBUCHA
             </div>
             <div class="scroll-text" data-scroll data-scroll-direction="horizontal" data-scroll-speed="6" style="top: 60%;">
-                SHOP KAMBUCHA - SHOP KAMBUCHA - SHOP KAMBUCHA - SHOP KAMBUCHA - SHOP KAMBUCHA - SHOP KAMBUCHA - SHOP KAMBUCHA 
+                SHOP KOMBUCHA - SHOP KOMBUCHA - SHOP KOMBUCHA - SHOP KOMBUCHA - SHOP KOMBUCHA - SHOP KOMBUCHA - SHOP KOMBUCHA 
             </div>
            
         </section>
@@ -118,14 +118,9 @@
         <section class="product-section" data-scroll-section>
             <div class="container-fluid">
                 <div class="row align-items-center">
-                    <!-- Imagen del producto -->
+         
                     <div class="col-md-6 d-flex justify-content-center">
-                        <img src="media/pexels-pixabay-556414.jpg" 
-                             alt="Limones" 
-                             class="img-fluid rounded" 
-                             data-scroll 
-                             data-scroll-speed="2" 
-                             data-scroll-class="in-view">
+                        <model-viewer src="media/lata_web.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
                     </div>
                     <!-- Detalles del producto -->
                     <div class="col-md-6 text-center text-md-start">
@@ -143,6 +138,7 @@
                 </div>
             </div>
         </section>
+
  <!-- Bottom Navigation -->
  <div class="bottom-nav">
     <button id="menuToggle" class="menu-button">☰</button>
@@ -164,12 +160,14 @@
     </main>
 
 
-    <!-- LOCOMOTIVE SCROLL JS -->
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-    <script src="js/script.js"></script>
+<!-- LOCOMOTIVE SCROLL JS -->
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/librerias.js"></script>
+<script src="js/locomotive-scroll.min.js"></script>
 
-    <script src="js/librerias.js"></script>
-    <script src="js/locomotive-scroll.min.js"></script>
+<!-- MODEL VIEWER 3D -->
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 
 </body>
 </html>
