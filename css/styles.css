@@ -407,16 +407,3 @@ model-viewer {
     opacity: 1;
 }
 
-@media (max-width: 768px) {
-    model-viewer {
-        width: 300px;
-        height: 300px;
-    }
-}
-
-@media (max-width: 576px) {
-    model-viewer {
-        width: 200px;
-        height: 200px;
-    }
-}
