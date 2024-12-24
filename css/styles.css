@@ -407,3 +407,9 @@ model-viewer {
     opacity: 1;
 }
 
+@media (max-width: 414px) {
+    .hero-content h1 {
+        font-size: 9rem;
+        margin-top: -94px;
+    }
+}
