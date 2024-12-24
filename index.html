@@ -29,7 +29,7 @@
     <!-- Scroll Container -->
     <main data-scroll-container>
         <!-- Section 1 -->
-        <section class="hero" data-scroll-section>
+        <section id="hero" class="hero" data-scroll-section>
             <div class="position-relative w-100 h-100">
                 <video src="media/video1.mp4" autoplay muted loop class="hero-video"></video>
                 <video src="media/video2.mp4" autoplay muted loop class="hero-video d-none"></video>
@@ -57,8 +57,10 @@
         </section>
 
         <!-- Section 3 -->
-         <section class="titles" data-scroll-section><h1 class="references">Refrences!</h1></section>
-       
+        <section id="references" class="titles" data-scroll-section>
+            <h1 class="references">Refrences!</h1>
+        </section>
+
         <section class="section1 py-5" data-scroll-section>
             
             <div class="horizontal-scroll-container" data-scroll data-scroll-direction="horizontal" data-scroll-speed="8">
@@ -115,7 +117,7 @@
             </div>
         </section>
 
-        <section class="product-section" data-scroll-section>
+        <section id="product" class="product-section" data-scroll-section>
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <!-- Imagen del producto -->
@@ -131,33 +133,31 @@
                             ★★★★★ <span class="reviews">(200+ Reviews)</span>
                         </div>
                         <p class="product-description" data-scroll data-scroll-speed="0.8">
-                            Embark on a tropical journey with Sanita Kombucha, a refreshing fusion of juicy mangoes and vibrant pitaya (dragon fruit). This naturally fermented drink combines bold fruity flavors with the tangy effervescence of kombucha, offering a deliciously unique beverage that’s as vibrant as it is revitalizing.
-
-                            Packed with probiotics and antioxidants, Sanita Kombucha - Mango y Pitaya is not only a treat for your taste buds but also a boost for your gut health. Its bright tropical notes make it perfect for any occasion, whether you're lounging at the beach, energizing your day, or pairing it with your favorite meal.                        </p>
+                            Embark on a tropical journey with Sanita Kombucha, a refreshing fusion of juicy mangoes and vibrant pitaya (dragon fruit). This naturally fermented drink combines bold fruity flavors with the tangy effervescence of kombucha, offering a deliciously unique beverage that’s as vibrant as it is revitalizing.</p>
                         <button class="btn btn-outline-light explore-btn">EXPLORE</button>
                     </div>
                 </div>
             </div>
         </section>
- <!-- Bottom Navigation -->
- <div class="bottom-nav">
-    <button id="menuToggle" class="menu-button">☰</button>
-</div>
+    </main>   
+    
+    <div class="bottom-nav">
+        <button id="menuToggle" class="menu-button">☰</button>
+    </div>
 
     <!-- Slide-Up Menu -->
     <div id="slideMenu" class="slide-menu">
         <button id="closeMenu" class="close-button">✕</button>
         <ul>
-            <li><a href="#index.html">Home</a></li>
-            <li><a href="#about.html">About</a></li>
-            <li><a href="#contact.html">Contact</a></li>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#references">Reviews</a></li>
+            <li><a href="#product">Product</a></li>
+            <li><a href="#contact">About and Contact</a></li>
         </ul>
     </div>
 
     <!-- Overlay -->
     <div id="menuOverlay" class="menu-overlay"></div>
-    </main>
-
 
     <!-- LOCOMOTIVE SCROLL JS -->
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>

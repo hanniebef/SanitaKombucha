@@ -266,7 +266,10 @@ model-viewer {
 /* Descripción */
 .product-description {
     font-size: 1rem;
-    margin-bottom: 25px;}
+    margin-bottom: 25px;
+    margin-right: 100px;
+
+}
 
 /* Botón */
 .explore-btn {
@@ -409,7 +412,8 @@ model-viewer {
 
 @media (max-width: 414px) {
     .hero-content h1 {
-        font-size: 9rem;
-        margin-top: -94px;
+        font-size: 4rem;
+        /* padding: 12px 96px; */
+        margin-top: -32px;
     }
 }
