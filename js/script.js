@@ -21,17 +21,26 @@ document.addEventListener('DOMContentLoaded', () => {
       menuOverlay.classList.remove('active');
   });
 
-  // Smooth Scroll
+  // Inicializar Locomotive Scroll
+  const scroll = new LocomotiveScroll({
+      el: document.querySelector('[data-scroll-container]'),
+      smooth: true,
+      direction: 'vertical',
+  });
+
+  // Vincular enlaces del menú con Locomotive Scroll
   const links = document.querySelectorAll('a[href^="#"]');
   links.forEach(link => {
       link.addEventListener('click', (e) => {
-          e.preventDefault();
+          e.preventDefault(); // Evitar el comportamiento predeterminado
+
           const targetID = link.getAttribute('href').substring(1);
           const targetSection = document.getElementById(targetID);
+
           if (targetSection) {
-              targetSection.scrollIntoView({ behavior: 'smooth' });
-              slideMenu.classList.remove('active');
-              menuOverlay.classList.remove('active');
+              scroll.scrollTo(targetSection); // Usar Locomotive Scroll para desplazarse
+              slideMenu.classList.remove('active'); // Cerrar el menú
+              menuOverlay.classList.remove('active'); // Cerrar el overlay
           }
       });
   });
