@@ -22,3 +22,4 @@ document.addEventListener('DOMContentLoaded', () => {
       menuOverlay.classList.remove('active');
   });
 });
+

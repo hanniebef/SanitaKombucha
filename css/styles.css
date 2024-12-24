@@ -57,7 +57,6 @@ section {
     z-index: 1;
 }
 
-
 .hero-content {
     position: relative;
     z-index: 2;
@@ -144,35 +143,6 @@ section {
 .menu-overlay.open {
     opacity: 1;
     visibility: visible;
-}
-
-
-
-
-
-/* .bottom-nav {
-    position: fixed;
-    z-index: 1;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 30px;
-    background-color: #222;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
-}
-
-.menu-button, .cart-button {
-    font-size: 1.5rem;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.menu-button:hover, .cart-button:hover {
-    color: #ff7e5f;
 }
 
 /* Slide-Up Menu */
@@ -472,11 +442,79 @@ section {
     color: #000;
 }
 
-
-
-
-
 model-viewer {
     width: 400px; /* Ajusta según el tamaño deseado */
     height: 400px;
+}
+
+/* SHOP */
+.hero {
+    background-color: #FFD700;
+    color: white;
+    padding: 50px 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.hero .title {
+    font-size: 10rem;
+    font-weight: bold;
+    line-height: 0.9;
+    margin: 0;
+}
+.hero .title span {
+    display: block;
+}
+.hero model-viewer {
+    width: 100%;
+    height: 500px;
+    position: absolute; /* Cambiado a absolute para moverse libremente */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 1s ease-out;
+    z-index: 1000;
+    pointer-events: none; /* Evita interferencias con el scroll */
+}
+
+.scrolling-text {
+    position: relative;
+    background-color: white;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    z-index: 0; /* Aseguramos que el modelo pase por encima */
+}
+
+
+.scrolling-text span {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.content-section {
+    padding: 50px 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+.content-section .text {
+    font-size: 1.5rem;
+    line-height: 2;
 }
