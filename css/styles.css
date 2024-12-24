@@ -292,68 +292,42 @@ model-viewer {
 /* Bottom Navigation */
 .bottom-nav {
     position: fixed;
-    z-index: 1;
     bottom: 0;
     width: 100%;
-    display: flex;
-    justify-content: center; /* Centra el botón horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    padding: 15px 0;
-    background-color: transparent; /* Sin fondo para solo mostrar el botón */
-    box-shadow: none; /* Sin sombra si no se necesita */
+    text-align: center;
+    z-index: 1000;
+    background-color: transparent;
 }
 
 .menu-button {
-    font-size: 1.9rem;
-    font-weight: bold;
-    color: white;
+    font-size: 2rem;
     background-color: #FFD700;
     border: none;
-    border-radius: 16px;
-    padding: 4px 0;
-    width: 17%; 
-    text-align: center;
+    border-radius: 50%;
+    padding: 10px 20px;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 .menu-button:hover {
     transform: scale(1.05); /* Efecto hover */
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-/*.menu-button, .cart-button {
-    font-size: 1.5rem;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.menu-button:hover, .cart-button:hover {
-    color: #ff7e5f;
-}*/
 
 /* Slide-Up Menu */
 .slide-menu {
     position: fixed;
     bottom: -300px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 400px;
+    left: 0;
+    width: 100%;
     background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    padding: 20px;
     text-align: center;
-    transition: all 0.5s ease-in-out;
+    padding: 20px;
+    transition: bottom 0.3s ease;
+    z-index: 1001;
 }
 
-
 .slide-menu.active {
-    bottom: 15%;
+    bottom: 0;
 }
 
 .slide-menu ul {
@@ -377,21 +351,6 @@ model-viewer {
     color: #ff7e5f;
 }
 
-.close-button {
-    font-size: 1.5rem;
-    color: #222;
-    background: none;
-    border: none;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.close-button:hover {
-    color: #ff7e5f;
-}
 /* Overlay */
 .menu-overlay {
     position: fixed;
@@ -399,15 +358,23 @@ model-viewer {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 998;
-    display: none;
+    background: rgba(0, 0, 0, 0.5);
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    visibility: hidden;
+    z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 .menu-overlay.active {
-    display: block;
     opacity: 1;
+    visibility: visible;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 @media (max-width: 414px) {
