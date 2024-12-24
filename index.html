@@ -120,19 +120,14 @@
                 <div class="row align-items-center">
                     <!-- Imagen del producto -->
                     <div class="col-md-6 d-flex justify-content-center">
-                        <img src="media/pexels-pixabay-556414.jpg" 
-                             alt="Limones" 
-                             class="img-fluid rounded" 
-                             data-scroll 
-                             data-scroll-speed="2" 
-                             data-scroll-class="in-view">
+                        <model-viewer src="media/lata_web.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
                     </div>
                     <!-- Detalles del producto -->
                     <div class="col-md-6 text-center text-md-start">
                         <h2 class="product-title" data-scroll data-scroll-speed="1">CHILLI FLAME</h2>
                         <p class="product-subtitle" data-scroll data-scroll-speed="1.5">KOFFIRACHA</p>
                         <p class="product-price">£9.00 <span class="vat-text">VAT Included</span></p>
-                        <div class="rating">
+                        <div class="rating-product">
                             ★★★★★ <span class="reviews">(3 Reviews)</span>
                         </div>
                         <p class="product-description" data-scroll data-scroll-speed="0.8">
@@ -146,7 +141,6 @@
  <!-- Bottom Navigation -->
  <div class="bottom-nav">
     <button id="menuToggle" class="menu-button">☰</button>
-    <button class="cart-button">Add to Cart</button>
 </div>
 
     <!-- Slide-Up Menu -->
@@ -171,5 +165,7 @@
     <script src="js/librerias.js"></script>
     <script src="js/locomotive-scroll.min.js"></script>
 
+    <!-- MODEL VIEWER 3D -->
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </body>
 </html>

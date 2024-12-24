@@ -201,22 +201,27 @@ section {
 }
 
 /* Imagen del producto */
-.rounded {
-    max-width: 78%;
-    border-radius: 10px;
-    transition: transform 0.8s ease-out;
+model-viewer {
+    width: 400px; /* Ancho deseado */
+    height: 400px; /* Altura deseada */
+    max-width: 100%; /* Opcional: Ajusta al ancho máximo del contenedor */
+    max-height: 100%; /* Opcional: Ajusta al alto máximo del contenedor */
+    display: block; /* Asegura que se comporte como un bloque */
+    margin: auto; /* Centra el elemento horizontalmente */
 }
 
-.rounded.in-view {
-    transform: scale(1.05); /* Zoom cuando aparece */
+.rating-product{
+    color: black;
+    margin-bottom: 16px;
 }
 
 /* Animaciones generales para el texto */
 .product-title,
 .product-subtitle,
 .product-description,
-.rating {
-    opacity: 0;
+.rating,
+.rating-product {
+    opacity: 100;
     transform: translateY(20px); /* Aparece desde abajo */
     transition: all 0.6s ease-out;
 }
@@ -230,20 +235,20 @@ section {
 .product-title {
     font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
 }
 
 /* Subtítulo del producto */
 .product-subtitle {
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    margin-bottom: 1px;
 }
 
 /* Precio */
 .product-price {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
 }
 
 .vat-text {
@@ -251,12 +256,7 @@ section {
     color: gray;
 }
 
-/* Rating */
-.rating {
-    font-size: 1.2rem;
-    color: black; /* Estrellas negras */
-    margin-bottom: 15px;
-}
+
 
 .reviews {
     font-size: 0.9rem;
@@ -266,8 +266,7 @@ section {
 /* Descripción */
 .product-description {
     font-size: 1rem;
-    margin-bottom: 20px;
-}
+    margin-bottom: 25px;}
 
 /* Botón */
 .explore-btn {
@@ -294,13 +293,33 @@ section {
     bottom: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    padding: 15px 30px;
-    background-color: #222;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    justify-content: center; /* Centra el botón horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    padding: 15px 0;
+    background-color: transparent; /* Sin fondo para solo mostrar el botón */
+    box-shadow: none; /* Sin sombra si no se necesita */
 }
 
-.menu-button, .cart-button {
+.menu-button {
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: white;
+    background-color: #FFD700;
+    border: none;
+    border-radius: 16px;
+    padding: 4px 0;
+    width: 17%; 
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+.menu-button:hover {
+    transform: scale(1.05); /* Efecto hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*.menu-button, .cart-button {
     font-size: 1.5rem;
     color: white;
     background: none;
@@ -311,7 +330,7 @@ section {
 
 .menu-button:hover, .cart-button:hover {
     color: #ff7e5f;
-}
+}*/
 
 /* Slide-Up Menu */
 .slide-menu {
@@ -320,14 +339,15 @@ section {
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
-    max-width: 500px;
+    max-width: 400px;
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     padding: 20px;
     text-align: center;
-    transition: all 0.5s;
+    transition: all 0.5s ease-in-out;
 }
+
 
 .slide-menu.active {
     bottom: 15%;
@@ -369,7 +389,6 @@ section {
 .close-button:hover {
     color: #ff7e5f;
 }
-
 /* Overlay */
 .menu-overlay {
     position: fixed;
@@ -379,7 +398,25 @@ section {
     height: 100%;
     z-index: 998;
     display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
+
 .menu-overlay.active {
     display: block;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    model-viewer {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    model-viewer {
+        width: 200px;
+        height: 200px;
+    }
 }
