@@ -4,19 +4,15 @@
  let currentVideo = 0;
 
  function switchVideo() {
-     videos[currentVideo].classList.add('active');
+     videos[currentVideo].classList.add('d-none');
      currentVideo = (currentVideo + 1) % videos.length;
-     videos[currentVideo].classList.remove('active');
+     videos[currentVideo].classList.remove('d-none');
  }
 
  setInterval(switchVideo, 10000);
 
- 
-
 
  document.addEventListener("DOMContentLoaded", () => {
-
-    
     // Initialize Locomotive Scroll
     const scroll = new LocomotiveScroll({
         el: document.querySelector('[data-scroll-container]'),
@@ -35,8 +31,3 @@
         direction: 'vertical'
     });
 });
-
-
-
-
-
