@@ -499,3 +499,84 @@ model-viewer {
             transform: translateX(-100%);
         }
     }
+
+    /* WHY */
+
+    .why-drink-kombucha {
+        background-color: white;
+        height: 90%;
+            padding-top: 5rem;
+            padding-bottom: 5rem !important;
+    }
+
+    .why-drink-kombucha h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px; /* Menos espacio debajo del título */
+        margin-top: -20px; /* Ajustar título hacia arriba */
+    }
+
+    .why-drink-kombucha img {
+        max-width: 80%; /* Hacer los GIFs más pequeños */
+        height: auto;
+    }
+
+    .why-drink-kombucha p {
+        font-size: 1rem;
+        color: #555;
+        margin-top: 10px;
+    }
+
+    .text-left {
+        font-size: 7rem;
+        font-weight: bold;
+        width: auto;
+        margin: 0;
+        line-height: 1;
+        color: #323030;
+    }
+    
+    .ml10 {
+        position: relative;
+        font-weight: 900;
+        font-size: 6rem; /* Tamaño de fuente de acuerdo al texto */
+    }
+    
+    .ml10 .text-wrapper {
+        position: relative;
+        display: inline-block;
+        padding-top: 0.2em;
+        padding-right: 0.05em;
+        padding-bottom: 0.1em;
+        overflow: hidden;
+    }
+    
+    .ml10 .letter {
+        display: inline-block;
+        line-height: 1em;
+        transform-origin: 0 0;
+    }
+    
+
+    /* IMAGE SLIDE */
+
+    .image-slider {
+        position: relative;
+        width: 100%; /* Ajusta el ancho de las imágenes */
+        height: 500px; /* Ajusta la altura de las imágenes */
+        margin: 0 auto; /* Centra las imágenes en el contenedor */
+      }
+    
+      .image-slider img {
+        transition: opacity 1s ease-in-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* Asegura que todas las imágenes tengan el mismo ancho */
+        height: 100%; /* Asegura que todas las imágenes tengan la misma altura */
+        object-fit: cover; /* Asegura que las imágenes cubran el área sin estirarse */
+      }
+
+    
+    
