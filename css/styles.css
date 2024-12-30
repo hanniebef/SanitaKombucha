@@ -443,78 +443,59 @@ section {
 }
 
 model-viewer {
-    width: 400px; /* Ajusta según el tamaño deseado */
+    width: 400px; 
     height: 400px;
 }
 
-/* SHOP */
-.hero {
-    background-color: #FFD700;
-    color: white;
-    padding: 50px 0;
+/* ABOUT */
+
+.hero2 {
+    position: relative;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-.hero .title {
-    font-size: 10rem;
-    font-weight: bold;
-    line-height: 0.9;
-    margin: 0;
-}
-.hero .title span {
-    display: block;
-}
-.hero model-viewer {
-    width: 100%;
-    height: 500px;
-    position: absolute; /* Cambiado a absolute para moverse libremente */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: transform 1s ease-out;
-    z-index: 1000;
-    pointer-events: none; /* Evita interferencias con el scroll */
-}
-
-.scrolling-text {
-    position: relative;
-    background-color: white;
-    color: black;
-    font-size: 2rem;
-    font-weight: bold;
     overflow: hidden;
-    text-align: center;
-    padding: 10px 0;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    z-index: 0; /* Aseguramos que el modelo pase por encima */
 }
 
-
-.scrolling-text span {
-    display: inline-block;
-    white-space: nowrap;
-    animation: scroll 10s linear infinite;
+.hero2-image {
+        height: 100%; 
+        object-fit: cover;
 }
 
-@keyframes scroll {
-    from {
-        transform: translateX(100%);
+.hero2-content {
+        z-index: 10; 
     }
-    to {
-        transform: translateX(-100%);
+
+.hero2-content h1 {
+        font-size: 7rem; 
+        line-height: 1;
     }
-}
 
-.content-section {
-    padding: 50px 0;
-    min-height: 100vh;
-    position: relative;
-}
-
-.content-section .text {
-    font-size: 1.5rem;
-    line-height: 2;
-}
+    .scrolling-text {
+        position: relative;
+        background-color: white;
+        color: black;
+        font-size: 2rem;
+        font-weight: bold;
+        overflow: hidden;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        white-space: nowrap;
+    }
+    
+    .scrolling-inner {
+        display: flex;
+        animation: scroll 10s linear infinite;
+    }
+    
+    .scrolling-inner span {
+        flex-shrink: 0; /* Evita que los elementos se reduzcan */
+        white-space: nowrap; /* Asegura que el texto no se rompa */
+    }
+    
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
