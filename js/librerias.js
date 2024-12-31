@@ -23,3 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Scroll position:', args.scroll);
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+        direction: 'vertical'
+    });
+
+    scroll.on('scroll', (args) => {
+        document.documentElement.style.setProperty('--scroll-y', `${args.scroll.y}px`);
+    });
+});
+
+

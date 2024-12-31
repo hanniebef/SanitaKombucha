@@ -66,12 +66,29 @@ section {
         width: 616px; /* Ocupa el ancho del contenedor */
     height: auto; /* Mantén la proporción */
 }
+ /*SECTION 2 */
 
 .section2 {
     background: white;;
     position: relative;
+    overflow: hidden;
+
+}
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
 }
 
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .scroll-text {
     position: absolute;
     font-size: 4rem;
@@ -80,11 +97,32 @@ section {
     color: black;
     background: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
     padding: 10px;
     transform: rotate(-15deg);
+    width: 100%;
+    transition: transform 0.5s ease-out;
 }
 
+
+
+/* First text moves down slower */
+.scroll-text:nth-child(1) {
+    top: 20%;
+    transform: translateY(var(--scroll-y, 0));
+}
+
+/* Second text moves up faster */
+.scroll-text:nth-child(2) {
+    top: 50%;
+    transform: translateY(calc(var(--scroll-y, 0) * -2));
+}
+
+/* Third text moves down at medium speed */
+.scroll-text:nth-child(3) {
+    top: 80%;
+    transform: translateY(calc(var(--scroll-y, 0) * 1.5));
+}
+ /*SECTION 3 */
 .section1 {
     background-color: #FFD700; /* Yellow background */
     padding: 20px 0;
