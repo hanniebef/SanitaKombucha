@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+
+<!-- CUSTOM CSS -->
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/locomotive-scroll.css">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Hero2 -->
+<section class="hero2 position-relative text-white">
+    <!-- Imagen de fondo -->
+    <img src="media/Kombucha_cover.jpg" alt="Kombucha cover" class="w-100 hero2-image">
+
+    <!-- Contenido sobre la imagen -->
+    <div class="hero2-content position-absolute top-50 end-0 translate-middle-y text-end pe-5">
+        <h1 class="display-4 fw-bold">ABOUT</h1>
+        <h1 class="display-4 fw-bold">SANITA</h1>
+    </div>
+</section>
+
+<!-- Botón Menú -->
+<div class="menu-container">
+    <button id="menuToggle" class="menu-button">Menú</button>
+</div>
+
+<!-- Slide-Up Menu -->
+<div id="slideMenu" class="slide-menu">
+    <button id="closeMenu" class="close-button">✕</button>
+    <ul>
+        <li><a href="#index.html">Home</a></li>
+        <li><a href="#about.html">About</a></li>
+        <li><a href="#contact.html">Contact</a></li>
+    </ul>
+</div>
+
+<!-- Overlay -->
+<div id="menuOverlay" class="menu-overlay"></div>
+
+<!-- Scrolling Text -->
+<div class="scrolling-text">
+    <div class="scrolling-inner">
+        Sanita Kombucha · Sanita Kombucha · Sanita Kombucha · Sanita Kombucha · Sanita Kombucha · 
+    </div>
+</div>
+
+
+<!-- Why Drink Kombucha Section -->
+<section class="why-drink-kombucha" style="background-color: white;">
+    <div class="container">
+ 
+        <h2 class="text-center mb-5">¿Why Drink Kombucha?</h2>
+        
+        <!-- Fila de GIFs -->
+        <div class="row justify-content-center">
+            <div class="col-6 col-md-3 d-flex flex-column align-items-center">
+                <img src="media/healthy-food.gif" alt="Healthy Food" class="img-fluid mb-2" style="max-width: 50%;">
+                <p class="text-center">Consume prebiotics, probiotics, and fermented foods.</p>
+            </div>
+            <div class="col-6 col-md-3 d-flex flex-column align-items-center">
+                <img src="media/digestive-system.gif" alt="Digestive System" class="img-fluid mb-2" style="max-width: 50%;">
+                <p class="text-center">Get plenty of fiber from fruits, veggies, nuts, beans, and whole grains</p>
+            </div>
+            <div class="col-6 col-md-3 d-flex flex-column align-items-center">
+                <img src="media/rest.gif" alt="Rest" class="img-fluid mb-2" style="max-width: 50%;">
+                <p class="text-center">Sleep is super important – your gut needs a rest too!</p>
+            </div>
+            <div class="col-6 col-md-3 d-flex flex-column align-items-center">
+                <img src="media/happy.gif" alt="Happy" class="img-fluid mb-2" style="max-width: 50%;">
+                <p class="text-center">Do what feels good!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- IMG SECTION -->
+<section class="img-section py-5" style="background-color: #FFD700;">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Imagen a la izquierda con bordes redondeados y tamaño ajustado -->
+            <div class="col-12 col-md-6 text-center">
+                <div class="image-slider">
+                    <img src="media/About_img-3.webp" alt="About Image 1" class="img-fluid rounded active" style="max-width: 90%; border-radius: 15px;">
+                    <img src="media/About_img-2.jpg" alt="About Image 2" class="img-fluid rounded" style="max-width: 90%; border-radius: 15px; opacity: 0;">
+                    <img src="media/About_img-4.jpg" alt="About Image 3" class="img-fluid rounded" style="max-width: 90%; border-radius: 15px; opacity: 0;">
+                </div>
+            </div>
+            <!-- Texto a la derecha -->
+            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center" style="height: 100vh;">
+                <h1 class="text-left ml10">
+                    <span class="text-wrapper">
+                        <span class="letters"> ACHIEVE OPTIMAL HEALTH</span>
+                    </span>
+                </h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GALERIA -->
+    
+    <div class="container-fluid m-0 p-0 my-4">
+      <div class="row justify-content-center mt-4">
+        <div class="col-12 p-0">
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-center mb-5">Our Favorites:</h2>
+    
+      <div class="row justify-content-center">
+    
+        
+          <!-- Kombucha Piña -->
+          <div class="col-md-3 col-sm-6 d-flex justify-content-center">
+            <div class="hovereffect">
+              <img src="media/Kombucha_piña.png" class="img-fluid rounded" alt="Pineapple Kombucha">
+              <div class="overlay">
+                <h2>Pineapple Kombucha</h2>
+                <button class="info btn btn-light" data-bs-toggle="modal" data-bs-target="#modal1">Info</button>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Kombucha Jengibre -->
+          <div class="col-md-3 col-sm-6 d-flex justify-content-center">
+            <div class="hovereffect">
+              <img src="media/Kombucha_jengibre.png" class="img-fluid rounded" alt="Ginger Kombucha">
+              <div class="overlay">
+                <h2>Ginger Kombucha</h2>
+                <button class="info btn btn-light" data-bs-toggle="modal" data-bs-target="#modal2">Info</button>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Kombucha Pitahaya -->
+          <div class="col-md-3 col-sm-6 d-flex justify-content-center">
+            <div class="hovereffect">
+              <img src="media/Kombucha_pitahaya.png" class="img-fluid rounded" alt="Kombucha Pitahaya">
+              <div class="overlay">
+                <h2>Grain Bowl</h2>
+                <button class="info btn btn-light" data-bs-toggle="modal" data-bs-target="#modal3">Info</button>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+        
+        <!-- Segunda fila de imágenes -->
+        <div class="row justify-content-center mt-4">
+      
+          <!-- Kombucha Sandía -->
+          <div class="col-md-3 col-sm-6 d-flex justify-content-center">
+            <div class="hovereffect">
+              <img src="media/Kombucha_sandia.png" class="img-fluid rounded" alt="Watermelon Kombucha">
+              <div class="overlay">
+                <h2>Watermelon Kombucha</h2>
+                <button class="info btn btn-light" data-bs-toggle="modal" data-bs-target="#modal4">Info</button>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Kombucha Frutos del Bosque -->
+          <div class="col-md-3 col-sm-6 d-flex justify-content-center">
+            <div class="hovereffect">
+              <img src="media/Kombucha_frutos.png" class="img-fluid rounded" alt="Berry Kombucha">
+              <div class="overlay">
+                <h2>Berry Kombucha</h2>
+                <button class="info btn btn-light" data-bs-toggle="modal" data-bs-target="#modal5">Info</button>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Kombucha Limón -->
+          <div class="col-md-3 col-sm-6 d-flex justify-content-center">
+            <div class="hovereffect">
+              <img src="media/Kombucha_limon.png" class="img-fluid rounded" alt="Lemon Kombucha">
+              <div class="overlay">
+                <h2>Lemon Kombucha</h2>
+                <button class="info btn btn-light" data-bs-toggle="modal" data-bs-target="#modal6">Info</button>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+    
+    
+    <!-- Load More Button -->
+    <div class="row justify-content-center mt-4">
+      <div class="col-12 text-center">
+        <button type="button" class="btn btn-light border border-dark mb-5">Load More</button>
+      </div>
+    </div>
+    
+    
+    <!-- MODALES -->
+    
+    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal1Label">Pineapple Kombucha</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <p>This refreshing pineapple kombucha combines the tropical flavor of the fruit with the probiotic benefits of fermentation. Perfect for those looking for a delicious and healthy drink, it’s ideal for relaxing moments. Enjoy it chilled and let each sip transport you to a paradisiacal beach.</p> <p>Each serving provides 45 kcal, 0.5g protein, 10g carbohydrates (of which 8g are sugars), 0g fat, 0g fiber, and 0.01g salt.</p>
+    
+          <div class="modal-footer d-flex justify-content-center">
+            <button type="button" class="btn btn-light">Go to recipe</button>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal2Label">Ginger Kombucha</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <p>This ginger kombucha offers a spicy and warm touch that makes it unique. Perfect for energizing yourself and enjoying its antioxidant properties, this drink is the ideal choice for any time of the day. Its distinctive flavor blends the best of tradition and modernity.</p> <p>Each serving provides 40 kcal, 0.4g protein, 9g carbohydrates (of which 7g are sugars), 0g fat, 0g fiber, and 0.02g salt.</p>
+          </div>
+    
+          <div class="modal-footer d-flex justify-content-center">
+            <button type="button" class="btn btn-light">Go to recipe</button>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal3Label">Pitahaya Kombucha</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <p>Exotic and vibrant, pitahaya kombucha is a feast for the senses. With its subtly sweet flavor and stunning natural color, this probiotic drink is as beautiful as it is beneficial. Perfect for adding a touch of adventure and health to your day.</p> <p>Each serving provides 44 kcal, 0.4g protein, 9g carbohydrates (of which 7g are sugars), 0g fat, 0g fiber, and 0.02g salt.</p>
+          </div>
+    
+          <div class="modal-footer d-flex justify-content-center">
+            <button type="button" class="btn btn-light">Go to recipe</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal4Label">Watermelon Kombucha</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+         <p>Refreshing and light, watermelon kombucha is the perfect companion for warm days. With a sweet and subtle flavor, this drink combines the probiotic benefits of kombucha with the summery touch of watermelon. Perfect to share and enjoy at any time.</p> <p>Each serving provides 42 kcal, 0.4g protein, 10g carbohydrates (of which 8g are sugars), 0g fat, 0g fiber, and 0.01g salt.</p>
+          </div>
+    
+          <div class="modal-footer d-flex justify-content-center">
+            <button type="button" class="btn btn-light">Go to recipe</button>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal5Label">Pineapple Kombucha</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <p>Full of flavor, this berry kombucha is a burst of sweetness and freshness. Made with a mix of berries like blueberries, blackberries, and raspberries, it’s the perfect drink for those who enjoy a fruity touch in their day. Ideal as a light and healthy companion.</p> <p>Each serving provides 50 kcal, 0.3g protein, 11g carbohydrates (of which 9g are sugars), 0g fat, 0g fiber, and 0.02g salt.</p>
+          </div>
+    
+          <div class="modal-footer d-flex justify-content-center">
+            <button type="button" class="btn btn-light">Go to recipe</button>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modal6Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal6Label">Pineapple Kombucha</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <p>Lemon kombucha is a citrusy and vibrant option that stands out for its freshness. This classic flavor never goes out of style and is perfect for those seeking a tangy and revitalizing touch in their favorite probiotic drink. Ideal to pair with light meals or simply enjoy on its own.</p> <p>Each serving provides 38 kcal, 0.3g protein, 8g carbohydrates (of which 6g are sugars), 0g fat, 0g fiber, and 0.03g salt.</p>
+          </div>
+    
+          <div class="modal-footer d-flex justify-content-center">
+            <button type="button" class="btn btn-light">Go to recipe</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+<!-- FOOTER -->
+
+<footer class="text-center text-lg-start text-white" style="background-color: #333">
+    <div class="container p-5 pb-3">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-3 mb-4 mb-md-0"> 
+          <div class="shadow-1-strong d-flex align-items-center justify-content-center mx-auto" style="width: 150px; height: 150px;">
+            <img src="media/Logo_Blanco.png" height="200" alt="Logo footer Claro" loading="lazy">
+          </div>
+          <ul class="list-unstyled d-flex justify-content-center">
+            <li>
+              <a class="textfooter px-2" href="#!">
+                <i class="fab fa-facebook-square"></i>
+              </a>
+            </li>
+            <li>
+              <a class="textfooter px-2" href="#!">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a class="textfooter ps-2" href="#!">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="row justify-content-between" id="links-row">
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Recipes</h5>
+            <ul class="list-unstyled hover-underline">
+              <li class="mb-2">
+                <a href="#get-cooking" class="textfooter"> Get Cooking</a>
+              </li>
+              <li class="mb-2">
+                <a href="#more-recipes" class="textfooter"> More Recipes</a>
+              </li>
+              <li class="mb-2">
+                <a href="#find-recipe" class="textfooter"> Find Recipe</a>
+              </li>
+              <li class="mb-2">
+                <a href="#categories" class="textfooter"> Categories</a>
+              </li>
+            </ul>
+          </div>
+  
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">About</h5>
+            <ul class="list-unstyled hover-underline">
+              <li class="mb-2">
+                <a href="#!" class="textfooter"> Our Story</a>
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="textfooter"> Our Mission</a>
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="textfooter"> Our values</a>
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="textfooter"> Our Team</a>
+              </li>
+            </ul>
+          </div>
+  
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Contact</h5>
+            <ul class="list-unstyled hover-underline">
+              <!-- Actualizado el enlace a contact.html -->
+              <li class="mb-2">
+                <a href="contact.html" class="textfooter">Contact</a>
+              </li>
+              <li class="mb-2">
+                <a href="contact.html" class="textfooter">Email</a> <!-- También actualizado -->
+              </li>
+              <li class="mb-2">
+                <a href="#newsletter" class="textfooter">Newsletter</a>
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="textfooter">Social Media</a>
+              </li>
+            </ul>
+          </div>
+  
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Privacy</h5>
+            <ul class="list-unstyled hover-underline">
+              <li class="mb-2">
+                <a href="#!" class="textfooter">Terms</a>
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="textfooter">Conditions</a>
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="textfooter">Data</a>
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="textfooter">Cookies</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container-fluid p-0">
+        <hr style="border-color: rgb(249, 242, 230); opacity: 0.7;">
+      </div>
+  
+      <div class="text-center p-3 pb-4" style="background-color: #333">
+        &copy;2024 Sanita Kombucha. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+
+
+<!-- JAVASCRIPT -->
+<script src="js/script.js"></script>
+<!-- BOOTSTRAP JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- MODEL VIEWER 3D -->
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+<!-- WRAP TEXT -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+</body>
+</html>
