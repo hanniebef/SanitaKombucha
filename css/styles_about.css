@@ -1,5 +1,34 @@
-/* ABOUT */
+/* Root Variables */
+:root {
+    --modal-border: rgba(229, 231, 235, 1);
+    --text-primary: #111827;
+    --text-secondary: #6B7280;
+    --bg-light: #F9FAFB;
+}
 
+/* Locomotive Scroll Base Styles */
+html.has-scroll-smooth {
+    overflow: hidden;
+}
+
+html.has-scroll-dragging {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.has-scroll-smooth body {
+    overflow: hidden;
+}
+
+[data-scroll-container] {
+    min-height: 100vh;
+    overflow: visible !important;
+}
+
+
+/* Hero Section */
 .hero2 {
     position: relative;
     height: 100vh;
@@ -7,205 +36,212 @@
 }
 
 .hero2-image {
-        height: 100%; 
-        object-fit: cover;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .hero2-content {
-        z-index: 10; 
-    }
+    z-index: 10;
+}
 
 .hero2-content h1 {
-        font-size: 9rem; 
-        line-height: 1;
-    }
+    font-size: 9rem;
+    line-height: 1;
+}
 
-    .scrolling-text {
-        position: relative;
-        background-color: white;
-        color: black;
-        font-size: 2rem;
-        font-weight: bold;
-        overflow: hidden;
-        border-top: 2px solid black;
-        border-bottom: 2px solid black;
-        white-space: nowrap;
-    }
-    
-    .scrolling-inner {
-        display: flex;
-        animation: scroll 10s linear infinite;
-    }
-    
-    .scrolling-inner span {
-        flex-shrink: 0; /* Evita que los elementos se reduzcan */
-        white-space: nowrap; /* Asegura que el texto no se rompa */
-    }
-    
-    @keyframes scroll {
-        from {
-            transform: translateX(0);
-        }
-        to {
-            transform: translateX(-100%);
-        }
-    }
+/* Scrolling Text */
+.scrolling-text {
+    position: relative;
+    background-color: white;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    overflow: hidden;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    white-space: nowrap;
+}
 
-    /* WHY */
+.scrolling-inner {
+    display: flex;
+    animation: scroll 10s linear infinite;
+}
 
-    .why-drink-kombucha {
-        background-color: white;
-        height: 90%;
-            padding-top: 5rem;
-            padding-bottom: 5rem !important;
+.scrolling-inner span {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
     }
-
-    .why-drink-kombucha h2 {
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #333;
-        margin-bottom: 20px; /* Menos espacio debajo del título */
-        margin-top: -20px; /* Ajustar título hacia arriba */
+    to {
+        transform: translateX(-100%);
     }
+}
 
-    .why-drink-kombucha img {
-        max-width: 80%; /* Hacer los GIFs más pequeños */
-        height: auto;
-    }
+/* Why Section */
+.why-drink-kombucha {
+    background-color: white;
+    height: 90%;
+    padding-top: 5rem;
+    padding-bottom: 5rem !important;
+}
 
-    .why-drink-kombucha p {
-        font-size: 1rem;
-        color: #555;
-        margin-top: 10px;
-    }
+.why-drink-kombucha h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
 
-    .text-left {
-        font-size: 7rem;
-        font-weight: bold;
-        width: auto;
-        margin: 0;
-        line-height: 1;
-        color: #323030;
-    }
-    
-    .ml10 {
-        position: relative;
-        font-weight: 900;
-        font-size: 6rem; /* Tamaño de fuente de acuerdo al texto */
-    }
-    
-    .ml10 .text-wrapper {
-        position: relative;
-        display: inline-block;
-        padding-top: 0.2em;
-        padding-right: 0.05em;
-        padding-bottom: 0.1em;
-        overflow: hidden;
-    }
-    
-    .ml10 .letter {
-        display: inline-block;
-        line-height: 1em;
-        transform-origin: 0 0;
-    }
-    
+.why-drink-kombucha img {
+    max-width: 80%;
+    height: auto;
+}
 
-    /* IMAGE SLIDE */
+.why-drink-kombucha p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+}
 
-    .image-slider {
-        position: relative;
-        width: 100%; /* Ajusta el ancho de las imágenes */
-        height: 500px; /* Ajusta la altura de las imágenes */
-        margin: 0 auto; /* Centra las imágenes en el contenedor */
-      }
-    
-      .image-slider img {
-        transition: opacity 1s ease-in-out;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%; 
-        object-fit: cover; 
-      }
+/* Text Animation Styles */
+.text-left {
+    font-size: 7rem;
+    font-weight: bold;
+    width: auto;
+    margin: 0;
+    line-height: 1;
+    color: #323030;
+}
 
+.ml10 {
+    position: relative;
+    font-weight: 900;
+    margin-bottom: -66px !important;
+    font-size: 6rem;
+}
 
-/* GALLERY */
+.ml10 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+}
+
+.ml10 .letter {
+    display: inline-block;
+    line-height: 1em;
+    transform-origin: 0 0;
+}
+
+/* Image Slider */
+.image-slider {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.image-slider img {
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Gallery Section */
+
+.gallery-section .col {
+    display: flex;
+    justify-content: center;
+}
+
+.container-galler {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
 
 .gallery-section h2 {
     font-size: 2.5rem;
     font-weight: bold;
     color: #333;
-    margin-bottom: 20px; /* Menos espacio debajo del título */
-    margin-top: -20px; /* Ajustar título hacia arriba */
+    margin-bottom: 20px;
+    margin-top: -20px;
 }
 
 .gallery-img {
-    padding: 15px; 
+    padding: 15px;
     text-align: center;
-  }
+}
 
-  .img-fluid {
-    width:300px;
+.img-fluid {
+    width: 300px;
     height: 250px;
     object-fit: cover;
-  }
+}
 
-  .hovereffect h2 {
-    text-transform: uppercase;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    font-size: 17px;
-    -webkit-transform: translatey(-100px);
-    -ms-transform: translatey(-100px);
-    transform: translatey(-100px);
-    -webkit-transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
-    transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
-    padding: 10px;
-  }
-  
-  .hovereffect a.info {
-    text-decoration: none;
-    display: inline-block;
-    text-transform: uppercase;
-    color: #fff;
-    border: 1px solid #fff;
-    background-color: transparent;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    margin: 50px 0 0;
-    padding: 7px 14px;
-  }
-
-  .hovereffect {
-    width: fit-content;
+/* Hover Effects */
+.hovereffect {
+    width: 300px;
+    margin: 0 auto;
     height: 100%;
     float: left;
     overflow: hidden;
     position: relative;
     text-align: center;
     cursor: default;
-  }
-  
-  .hovereffect .overlay {
-    width: 100%;
-    height: 100%;
+}
+
+.hovereffect h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
+    padding: 10px;
+    margin: 0;
+}
+
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hovereffect .overlay {
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.5);
     transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
-  }
-  
-  .hovereffect img {
-    display: block;    position: relative;    transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);    transform-origin: center;
-  }
-  
-  .hovereffect a.info, .hovereffect button.info {
+}
+
+.hovereffect img {
+    display: block;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+    transform-origin: center;
+}
+
+.hovereffect a.info, .hovereffect button.info {
     text-transform: uppercase;
     color: #fff;
     border: 1px solid #fff;
@@ -214,58 +250,395 @@
     transition: all 0.4s ease;
     margin: 50px 0 0;
     padding: 7px 14px;
-  }
-  
-  .hovereffect:hover img {
+}
+
+.hovereffect:hover img {
     transform: scale(1.2);
-  }
-  
-  .hovereffect:hover .overlay {
+}
+
+.hovereffect:hover .overlay {
     opacity: 1;
-  }
-  
-  .hovereffect:hover h2, .hovereffect:hover a.info, .hovereffect:hover button.info {
+}
+
+.hovereffect:hover h2,
+.hovereffect:hover a.info,
+.hovereffect:hover button.info {
     opacity: 1;
     transform: translateY(0);
-  }
+}
 
-.modal-body , .modal-header , .modal-footer {
-  background-color: var(--white);
+/* Modal Styles */
+.modal {
+    z-index: 99999 !important;
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+.modal-backdrop {
+    z-index: 99998 !important;
+    display: none !important;
+
+}
+body.modal-open {
+    overflow: hidden;
+    padding-right: 0 !important;
+}
+
+.modal-backdrop.show {
+    opacity: 0.2;
+    backdrop-filter: blur(8px);
+}
+
+.modal-dialog {
+    max-width: 500px;
+}
+
+.modal-content {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .modal-header {
-  border-bottom: var(--bs-modal-header-border-width) solid #33333340;
-}
-
-.modal-footer {
-  border-top: var(--bs-modal-header-border-width) solid #33333340;
+    border-bottom: 1px solid var(--modal-border);
+    padding: 1.5rem;
+    background-color: white;
 }
 
 .modal-title {
-  color: #333;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.btn-close {
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.btn-close:hover {
+    opacity: 0.75;
+}
+
+.modal-body {
+    padding: 1.5rem;
+    background-color: white;
+}
+
+.modal-description {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Nutrition Grid */
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.nutrition-item {
+    background-color: var(--bg-light);
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.nutrition-label {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.nutrition-value {
+    color: var(--text-primary);
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Modal Footer */
+.modal-footer {
+    border-top: 1px solid var(--modal-border);
+    padding: 1.5rem;
+    background-color: white;
+}
+
+.btn-recipe {
+    background: #FFD700;
+    color: #323030;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-recipe:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    color: #323030;
+}
+
+/* Menu Styles */
+.slide-menu {
+    z-index: 99997;
+}
+
+.menu-overlay {
+    z-index: 99996;
+}
+
+/* Footer Styles */
+.hover-underline li {
+    border-bottom: none !important;
+}
+
+.hover-underline li:hover > a {
+    border-bottom: 1px solid white;
+    padding-bottom: 2px;
+}
+
+.hover-underline li > a {
+    border-bottom: none;
+    text-decoration: none;
+}
+
+.textfooter, .text-uppercase {
+    color: white;
+}
+
+.text-center {
+    font-size: 13px;
+}
+
+/* Fix for modal scrolling */
+.modal-open {
+    padding-right: 0 !important;
+}
+
+.modal.show .modal-dialog {
+    transform: none !important;
+}
+
+body {
+    padding-right: 0 !important;
+}
+
+[data-scroll-container] {
+    z-index: 1;
+}
+/* Tablet Styles (820px) */
+@media (max-width: 820px) {
+    /* Hero Section */
+    .hero2-content h1 {
+        font-size: 6rem;
+    }
+
+    /* Text Animation */
+    .ml10 {
+        font-size: 4rem;
+        margin-bottom: -45px !important;
+    }
+
+    .text-left {
+        font-size: 5rem;
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    /* Gallery Section */
+    .gallery-section .col {
+        padding: 10px;
+    }
+
+    .hovereffect {
+        width: 280px;
+        height: 230px;
+    }
+
+    /* Image Slider */
+    .img-section {
+        padding: 3rem 0;
+    }
+    .image-slider {
+        height: 400px;
+        max-width: 90%;
+    }
+
+    .gallery-section .row {
+        gap: 1.5rem;
+    }
+
+    .hovereffect {
+        max-width: 280px;
+    }
+
+    /* Menu and Navigation */
+    .slide-menu {
+        width: 300px;
+    }
+
+    /* Footer Adjustments */
+    #links-row {
+        justify-content: space-around;
+    }
+}
+
+/* Mobile Styles (414px) */
+@media (max-width: 414px) {
+    /* Hero Section */
+    .hero2-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero2-content {
+        right: 1rem !important;
+    }
+
+    /* Scrolling Text */
+    .scrolling-text {
+        font-size: 1.5rem;
+    }
+
+    /* Why Section */
+    .why-drink-kombucha h2 {
+        font-size: 2rem;
+        margin-top: 0;
+    }
+
+    .why-drink-kombucha .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 2rem;
+        padding: 0 4rem;
+
+    }
+
+ /* Image Slider Section */
+ .img-section {
+    min-height: auto;
+    padding: 2rem 0;
+}
+
+.img-section .row {
+    min-height: auto;
+    flex-direction: column;
+
+}
+
+.img-section .col-12 {
+    height: auto !important;
+    margin-bottom: 2rem;
+}
+
+.image-slider {
+    position: relative;
+    height: 300px;
+    width: 95%;
+    margin-bottom: 2rem;
+}
+
+.image-slider img {
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+} 
+
+.img-section .row {
+    flex-direction: column;
 }
 
 
-/* Footer */
 
-.hover-underline li {
-    border-bottom: none !important;
-  }
-  
-  .hover-underline li:hover > a {
-    border-bottom: 1px solid white;
-    padding-bottom: 2px; 
-  }
-  
-  .hover-underline li > a {
-    border-bottom: none;
-    text-decoration: none; 
-  }
-  
-  .textfooter , .text-uppercase {
-    color: white;
-  }
-  
-  .text-center {
-    font-size: 13px;
-  }
+    /* Gallery Section */
+    .gallery-section {
+        padding: 2rem 0;
+    }
+
+    .gallery-section .row {
+       margin: 0;
+        gap: 1rem;
+    }
+
+    .gallery-section .col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .hovereffect {
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+   
+    /* Text Animation */
+    .ml10 {
+        margin-top: 2rem;
+        font-size: 3rem;
+        margin-bottom: -30px !important;
+    }
+
+    .text-left {
+        padding: 1rem;
+    }
+
+    .letters {
+        font-size: 2.5rem;
+        text-align: center;
+        display: block;
+    }
+
+    /* Modal Adjustments */
+    .modal-dialog {
+        margin: 0.5rem;
+    }
+
+    .nutrition-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Menu Adjustments */
+    .slide-menu {
+        width: 100%;
+    }
+
+    /* Footer Adjustments */
+    #links-row {
+        text-align: center;
+    }
+
+    #links-row .col-lg-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Additional Small Mobile Styles (320px) */
+@media (max-width: 320px) {
+    .hovereffect {
+        height: 180px;
+    }
+
+    .image-slider {
+        height: 250px;
+    }
+
+    .letters {
+        font-size: 2rem;
+    }
+
+    .hero2-content h1 {
+        font-size: 2.5rem;
+    }
+}

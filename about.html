@@ -7,18 +7,22 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="css/locomotive-scroll.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/styles_about.css">
 </head>
 
-<body>
 
   <body>
-<main>
+<main data-scroll-container>
         <!-- Hero Section -->
-        <section class="hero2 position-relative text-white">
+        <section class="hero2 position-relative text-white" data-scroll-section>
             <img src="media/SanitaHero.jpg" alt="Artistic shot of Kombucha bottle with ambient lighting" class="w-100 hero2-image">
             <div class="hero2-content position-absolute top-50 end-0 translate-middle-y text-end pe-5">
                 <h1 class="display-4 fw-bold">ABOUT</h1>
@@ -27,7 +31,7 @@
         </section>
 
   <!-- Scrolling Text -->
-  <div class="scrolling-text">
+  <div class="scrolling-text" data-scroll-section>
     <div class="scrolling-inner">
         Sanita Kombucha · Sanita Kombucha · Sanita Kombucha · Sanita Kombucha · Sanita Kombucha · Sanita Kombucha · 
     </div>
@@ -35,7 +39,7 @@
 
 
     <!-- Why Drink Kombucha Section -->
-    <section class="why-drink-kombucha">
+    <section class="why-drink-kombucha" data-scroll-section>
       <div class="container">
           <h2 class="text-center mb-5">¿Why Drink Kombucha?</h2>
           <div class="row justify-content-center">
@@ -60,31 +64,41 @@
   </section>
 
  <!-- Image Slider Section -->
- <section class="img-section py-5" style="background-color: #FFD700;">
+ <section class="img-section py-5" style="background-color: #FFD700;" data-scroll-section data-scroll-position="center">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-12 col-md-6 text-center">
-                <div class="image-slider">
+                <div class="image-slider" data-scroll data-scroll-speed="1">
                     <img src="media/About_img-3.webp" alt="Kombucha brewing process" class="img-fluid rounded active" style="max-width: 90%; border-radius: 15px;">
                     <img src="media/About_img-2.jpg" alt="Kombucha ingredients" class="img-fluid rounded" style="max-width: 90%; border-radius: 15px; opacity: 0;">
                     <img src="media/About_img-4.jpg" alt="Finished Kombucha product" class="img-fluid rounded" style="max-width: 90%; border-radius: 15px; opacity: 0;">
                 </div>
             </div>
             <div class="col-12 col-md-6 d-flex align-items-center justify-content-center" style="height: 100vh;">
-                <h1 class="text-left ml10">
-                    <span class="text-wrapper">
-                        <span class="letters">ACHIEVE OPTIMAL HEALTH</span>
-                    </span>
-                </h1>
-            </div>
-        </div>
-    </div>
+              <div class="text-left">
+                  <h2 class="ml10">
+                      <span class="text-wrapper">
+                          <span class="letters">ACHIEVE</span>
+                      </span>
+                  </h2>
+                  <h2 class="ml10">
+                      <span class="text-wrapper">
+                          <span class="letters">OPTIMAL</span>
+                      </span>
+                  </h2>
+                  <h2 class="ml10">
+                      <span class="text-wrapper">
+                          <span class="letters">HEALTH</span>
+                      </span>
+                  </h2>
+              </div>
+          </div>
   </section>
 
-  <section class="gallery-section py-5">
-    <div class="container">
+  <section class="gallery-section py-5" data-scroll-section data-scroll-position="center">
+    <div class="container container-galler">
         <h2 class="text-center mb-5">Our Favorites:</h2>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 text-center">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 justify-content-center">
             <!-- Pineapple Kombucha -->
             <div class="col">
                 <div class="hovereffect">
@@ -154,113 +168,292 @@
     </div>
 
     <!-- Modals -->
-    <!-- Pineapple Modal -->
-    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modal1Label">Pineapple Kombucha</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Each serving provides 45 kcal, 0.5g protein, 10g carbohydrates (of which 8g are sugars), 0g fat, 0g fiber, and 0.01g salt.</p>
-                </div>
-                <div class="modal-footer d-flex justify-content-center">
-                    <button type="button" class="btn btn-light">Go to recipe</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Ginger Modal -->
-    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modal2Label">Ginger Kombucha</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Each serving provides 40 kcal, 0.4g protein, 9g carbohydrates (of which 7g are sugars), 0g fat, 0g fiber, and 0.02g salt.</p>
-                </div>
-                <div class="modal-footer d-flex justify-content-center">
-                    <button type="button" class="btn btn-light">Go to recipe</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-     <!-- Pitahaya Kombucha -->
-            <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="modal1Label">Pitahaya Kombucha</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<!-- Pineapple Modal -->
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true"  >
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modal1Label">Pineapple Kombucha</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p class="modal-description">
+                  Fresh and tropical, our Pineapple Kombucha combines the perfect balance of sweet and tart. 
+                  Made with organic ingredients and carefully fermented for optimal probiotic benefits.
+              </p>
+              <div class="nutrition-grid">
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Calories</div>
+                      <p class="nutrition-value">45</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Protein</div>
+                      <p class="nutrition-value">0.5g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Carbs</div>
+                      <p class="nutrition-value">10g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Sugars</div>
+                      <p class="nutrition-value">8g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Fat</div>
+                      <p class="nutrition-value">0g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Salt</div>
+                      <p class="nutrition-value">0.01g</p>
+                  </div>
               </div>
-              <div class="modal-body">
-                  <p>Exotic and vibrant, pitahaya kombucha is a feast for the senses. With its subtly sweet flavor and stunning natural color, this probiotic drink is as beautiful as it is beneficial. Perfect for adding a touch of adventure and health to your day.</p> <p>Each serving provides 44 kcal, 0.4g protein, 9g carbohydrates (of which 7g are sugars), 0g fat, 0g fiber, and 0.02g salt.</p>
-              </div>
-              <div class="modal-footer d-flex justify-content-center">
-                  <button type="button" class="btn btn-light">Go to recipe</button>
-              </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-recipe">Go to recipe</button>
           </div>
       </div>
   </div>
-
-  <!-- Watermelon Kombucha -->
-  <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modal1Label">Watermelon Kombucha</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>Refreshing and light, watermelon kombucha is the perfect companion for warm days. With a sweet and subtle flavor, this drink combines the probiotic benefits of kombucha with the summery touch of watermelon. Perfect to share and enjoy at any time.</p> <p>Each serving provides 42 kcal, 0.4g protein, 10g carbohydrates (of which 8g are sugars), 0g fat, 0g fiber, and 0.01g salt.</p>
-            </div>
-            <div class="modal-footer d-flex justify-content-center">
-                <button type="button" class="btn btn-light">Go to recipe</button>
-            </div>
-        </div>
-    </div>
 </div>
 
-  <!-- Berry Kombucha -->
-  <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modal1Label">Berry Kombucha</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>Full of flavor, this berry kombucha is a burst of sweetness and freshness. Made with a mix of berries like blueberries, blackberries, and raspberries, it’s the perfect drink for those who enjoy a fruity touch in their day. Ideal as a light and healthy companion.</p> <p>Each serving provides 50 kcal, 0.3g protein, 11g carbohydrates (of which 9g are sugars), 0g fat, 0g fiber, and 0.02g salt.</p>
-            </div>
-            <div class="modal-footer d-flex justify-content-center">
-                <button type="button" class="btn btn-light">Go to recipe</button>
-            </div>
-        </div>
-    </div>
+<!-- Ginger Modal -->
+<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modal2Label">Ginger Kombucha</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p class="modal-description">
+                  Zesty and invigorating, our Ginger Kombucha is crafted with the bold flavor of fresh ginger root.
+                  Perfectly fermented to bring out its natural spice, this kombucha is a refreshing and energizing drink 
+                  packed with probiotics for gut health and vitality.
+              </p>
+              <div class="nutrition-grid">
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Calories</div>
+                      <p class="nutrition-value">35</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Protein</div>
+                      <p class="nutrition-value">0g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Carbs</div>
+                      <p class="nutrition-value">8g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Sugars</div>
+                      <p class="nutrition-value">6g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Fat</div>
+                      <p class="nutrition-value">0g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Salt</div>
+                      <p class="nutrition-value">0.02g</p>
+                  </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-recipe">Go to recipe</button>
+          </div>
+      </div>
+  </div>
 </div>
 
-  <!-- Limon Kombucha -->
-  <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modal6Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modal1Label">Limon Kombucha</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>Lemon kombucha is a citrusy and vibrant option that stands out for its freshness. This classic flavor never goes out of style and is perfect for those seeking a tangy and revitalizing touch in their favorite probiotic drink. Ideal to pair with light meals or simply enjoy on its own.</p> <p>Each serving provides 38 kcal, 0.3g protein, 8g carbohydrates (of which 6g are sugars), 0g fat, 0g fiber, and 0.03g salt.</p>
-            </div>
-            <div class="modal-footer d-flex justify-content-center">
-                <button type="button" class="btn btn-light">Go to recipe</button>
-            </div>
-        </div>
-    </div>
+<!-- Pitahaya Modal -->
+<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modal3Label">Pitahaya Kombucha</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p class="modal-description">
+                  Exotic and vibrant, our Pitahaya Kombucha brings the unique flavor of dragon fruit to life. 
+                  Bursting with tropical sweetness and a hint of tang, this kombucha is a refreshing delight 
+                  packed with antioxidants and probiotics to support a healthy gut and glowing vitality.
+              </p>
+              <div class="nutrition-grid">
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Calories</div>
+                      <p class="nutrition-value">40</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Protein</div>
+                      <p class="nutrition-value">0.3g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Carbs</div>
+                      <p class="nutrition-value">9g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Sugars</div>
+                      <p class="nutrition-value">7g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Fat</div>
+                      <p class="nutrition-value">0g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Salt</div>
+                      <p class="nutrition-value">0.01g</p>
+                  </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-recipe">Go to recipe</button>
+          </div>
+      </div>
+  </div>
 </div>
+
+<!-- Watermelon Modal -->
+<div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modal4Label">Watermelon Kombucha</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p class="modal-description">
+                  Refreshing and light, our Watermelon Kombucha captures the essence of summer in every sip. 
+                  This perfectly balanced brew combines the subtle sweetness of ripe watermelon with our 
+                  signature fermented tea, creating a uniquely refreshing probiotic beverage.
+              </p>
+              <div class="nutrition-grid">
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Calories</div>
+                      <p class="nutrition-value">42</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Protein</div>
+                      <p class="nutrition-value">0.4g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Carbs</div>
+                      <p class="nutrition-value">10g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Sugars</div>
+                      <p class="nutrition-value">8g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Fat</div>
+                      <p class="nutrition-value">0g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Salt</div>
+                      <p class="nutrition-value">0.01g</p>
+                  </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-recipe">Go to recipe</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Berry Modal -->
+<div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modal5Label">Berry Kombucha</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p class="modal-description">
+                  A delightful blend of mixed berries creates this vibrant and flavorful kombucha. 
+                  Our Berry Kombucha combines the natural sweetness of blueberries, blackberries, 
+                  and raspberries with our perfectly fermented tea for a antioxidant-rich probiotic beverage.
+              </p>
+              <div class="nutrition-grid">
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Calories</div>
+                      <p class="nutrition-value">50</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Protein</div>
+                      <p class="nutrition-value">0.3g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Carbs</div>
+                      <p class="nutrition-value">11g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Sugars</div>
+                      <p class="nutrition-value">9g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Fat</div>
+                      <p class="nutrition-value">0g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Salt</div>
+                      <p class="nutrition-value">0.02g</p>
+                  </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-recipe">Go to recipe</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Lemon Modal -->
+<div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modal6Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modal6Label">Lemon Kombucha</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p class="modal-description">
+                  Bright and zesty, our Lemon Kombucha offers a perfect balance of tart and sweet. 
+                  Made with fresh lemon and our signature fermented tea, this classic flavor 
+                  delivers a crisp, refreshing taste along with all the probiotic benefits of kombucha.
+              </p>
+              <div class="nutrition-grid">
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Calories</div>
+                      <p class="nutrition-value">38</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Protein</div>
+                      <p class="nutrition-value">0.3g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Carbs</div>
+                      <p class="nutrition-value">8g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Sugars</div>
+                      <p class="nutrition-value">6g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Fat</div>
+                      <p class="nutrition-value">0g</p>
+                  </div>
+                  <div class="nutrition-item">
+                      <div class="nutrition-label">Salt</div>
+                      <p class="nutrition-value">0.03g</p>
+                  </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-recipe">Go to recipe</button>
+          </div>
+      </div>
+  </div>
+</div>  
 </section>
 
 
@@ -275,16 +468,16 @@
   <div class="slide-menu" aria-label="Navigation Menu">
       <button class="close-button" aria-label="Close navigation menu">&times;</button>
       <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
   </div>
 
 <!-- FOOTER -->
 
-<footer class="text-center text-lg-start text-white" style="background-color: #333">
+<footer class="text-center text-lg-start text-white" style="background-color: #333" data-scroll-section>
   <div class="container p-5 pb-3">
       <div class="row justify-content-center">
         <div class="col-12 col-md-3 mb-4 mb-md-0"> 
@@ -399,14 +592,15 @@
 
 
 
-<!-- JAVASCRIPT -->
-<script src="js/script.js"></script>
 <!-- BOOTSTRAP JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- MODEL VIEWER 3D -->
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
 <!-- WRAP TEXT -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
+<!-- JAVASCRIPT -->
+<script src="js/locomotive-about.js"></script>
 </body>
 </html>
