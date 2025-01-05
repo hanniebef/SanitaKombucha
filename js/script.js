@@ -1,49 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.getElementById('menuToggle');
-  const closeMenu = document.getElementById('closeMenu');
-  const slideMenu = document.getElementById('slideMenu');
-  const menuOverlay = document.getElementById('menuOverlay');
+    const menuButton = document.querySelector('.menu-button');
+    const slideMenu = document.querySelector('.slide-menu');
+    const overlay = document.querySelector('.menu-overlay');
+    const closeButton = document.querySelector('.close-button');
 
-  // Abrir el menú
-  menuToggle.addEventListener('click', () => {
-      slideMenu.classList.add('active');
-      menuOverlay.classList.add('active');
-  });
+    function toggleMenu() {
+        slideMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = slideMenu.classList.contains('active') ? 'hidden' : '';
+    }
 
-  // Cerrar el menú
-  closeMenu.addEventListener('click', () => {
-      slideMenu.classList.remove('active');
-      menuOverlay.classList.remove('active');
-  });
-
-  menuOverlay.addEventListener('click', () => {
-      slideMenu.classList.remove('active');
-      menuOverlay.classList.remove('active');
-  });
-
-  // Inicializar Locomotive Scroll
-  const scroll = new LocomotiveScroll({
-      el: document.querySelector('[data-scroll-container]'),
-      smooth: true,
-      direction: 'vertical',
-  });
-
-  // Vincular enlaces del menú con Locomotive Scroll
-  const links = document.querySelectorAll('a[href^="#"]');
-  links.forEach(link => {
-      link.addEventListener('click', (e) => {
-          e.preventDefault(); // Evitar el comportamiento predeterminado
-
-          const targetID = link.getAttribute('href').substring(1);
-          const targetSection = document.getElementById(targetID);
-
-          if (targetSection) {
-              scroll.scrollTo(targetSection); // Usar Locomotive Scroll para desplazarse
-              slideMenu.classList.remove('active'); // Cerrar el menú
-              menuOverlay.classList.remove('active'); // Cerrar el overlay
-          }
-      });
-  });
+    menuButton.addEventListener('click', toggleMenu);
+    closeButton.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', toggleMenu);
 });
 
 
