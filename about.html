@@ -38,43 +38,49 @@
   </div>
 
 
-    <!-- Why Drink Kombucha Section -->
-    <section class="why-drink-kombucha" data-scroll-section>
-      <div class="container">
-          <h2 class="text-center mb-5">¿Why Drink Kombucha?</h2>
-          <div class="row justify-content-center">
-              <div class="col-6 col-md-3 d-flex flex-column align-items-center">
-                  <img src="media/healthy-food.gif" alt="Animated healthy food illustration" class="img-fluid mb-2" style="max-width: 50%;">
-                  <p class="text-center">Consume prebiotics, probiotics, and fermented foods.</p>
-              </div>
-              <div class="col-6 col-md-3 d-flex flex-column align-items-center">
-                  <img src="media/digestive-system.gif" alt="Animated digestive system illustration" class="img-fluid mb-2" style="max-width: 50%;">
-                  <p class="text-center">Get plenty of fiber from fruits, veggies, nuts, beans, and whole grains</p>
-              </div>
-              <div class="col-6 col-md-3 d-flex flex-column align-items-center">
-                  <img src="media/rest.gif" alt="Animated rest and relaxation illustration" class="img-fluid mb-2" style="max-width: 50%;">
-                  <p class="text-center">Sleep is super important – your gut needs a rest too!</p>
-              </div>
-              <div class="col-6 col-md-3 d-flex flex-column align-items-center">
-                  <img src="media/happy.gif" alt="Animated happy face illustration" class="img-fluid mb-2" style="max-width: 50%;">
-                  <p class="text-center">Do what feels good!</p>
+   <!-- Why Drink Kombucha Section -->
+   <section class="why-drink-kombucha" data-scroll-section>
+    <div class="container">
+        <h2 class="text-center mb-5">Why Drink Kombucha?</h2>
+        <div class="row justify-content-center benefits-container">
+            <div class="col-6 col-md-3 d-flex flex-column align-items-center benefit-item">
+                <img src="media/healthy-food.gif" alt="Animated healthy food illustration" class="img-fluid mb-2" loading="lazy">
+                <p class="text-center">Consume prebiotics, probiotics, and fermented foods.</p>
+            </div>
+
+            <div class="col-6 col-md-3 d-flex flex-column align-items-center benefit-item">
+              <img src="media/digestive-system.gif" alt="Animated healthy digestive system illustration" class="img-fluid mb-2" loading="lazy">
+              <p class="text-center">Get plenty of fiber from fruits, veggies, nuts, beans, and whole grains.</p>
+            </div>
+
+            <div class="col-6 col-md-3 d-flex flex-column align-items-center benefit-item">
+              <img src="media/rest.gif" alt="Animated rest and relaxation illustration" class="img-fluid mb-2" loading="lazy">
+              <p class="text-center">Sleep is super important – your gut needs a rest too!</p>
+            </div>
+
+            <div class="col-6 col-md-3 d-flex flex-column align-items-center benefit-item">
+              <img src="media/happy.gif" alt="Animated happy illustration" class="img-fluid mb-2" loading="lazy">
+              <p class="text-center">Do what feels good!</p>
+            </div>
+    
+        </div>
+    </div>
+</section>
+
+<!-- Image Slider Section -->
+<section class="img-section py-5" style="background-color: #FFD700;" data-scroll-section data-scroll-position="center">
+  <div class="container">
+      <div class="row align-items-center">
+          <!-- Image Column -->
+          <div class="col-12 col-md-6 text-center">
+              <div class="image-slider" data-scroll data-scroll-speed="1">
+                  <img src="media/About_img-3.webp" alt="Kombucha brewing process" class="img-fluid rounded active">
+                  <img src="media/About_img-2.jpg" alt="Kombucha ingredients" class="img-fluid rounded">
+                  <img src="media/About_img-4.jpg" alt="Finished Kombucha product" class="img-fluid rounded">
               </div>
           </div>
-      </div>
-  </section>
-
- <!-- Image Slider Section -->
- <section class="img-section py-5" style="background-color: #FFD700;" data-scroll-section data-scroll-position="center">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-12 col-md-6 text-center">
-                <div class="image-slider" data-scroll data-scroll-speed="1">
-                    <img src="media/About_img-3.webp" alt="Kombucha brewing process" class="img-fluid rounded active" style="max-width: 90%; border-radius: 15px;">
-                    <img src="media/About_img-2.jpg" alt="Kombucha ingredients" class="img-fluid rounded" style="max-width: 90%; border-radius: 15px; opacity: 0;">
-                    <img src="media/About_img-4.jpg" alt="Finished Kombucha product" class="img-fluid rounded" style="max-width: 90%; border-radius: 15px; opacity: 0;">
-                </div>
-            </div>
-            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center" style="height: 100vh;">
+          <!-- Text Column -->
+          <div class="col-12 col-md-6 text-animation-container">
               <div class="text-left">
                   <h2 class="ml10">
                       <span class="text-wrapper">
@@ -93,25 +99,28 @@
                   </h2>
               </div>
           </div>
-  </section>
+      </div>
+  </div>
+</section>
 
-  <section class="gallery-section py-5" data-scroll-section data-scroll-position="center">
-    <div class="container container-galler">
-        <h2 class="text-center mb-5">Our Favorites:</h2>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 justify-content-center">
-            <!-- Pineapple Kombucha -->
-            <div class="col">
-                <div class="hovereffect">
-                    <img src="media/Kombucha_piña.png" class="img-fluid rounded" alt="Bottle of Pineapple Kombucha">
-                    <div class="overlay">
-                        <h2>Pineapple Kombucha</h2>
-                        <button class="info btn btn-light" data-bs-toggle="modal" data-bs-target="#modal1" aria-label="Learn more about Pineapple Kombucha">Info</button>
-                    </div>
-                </div>
-            </div>
+<section class="gallery-section py-5" data-scroll-section>
+  <div class="container container-product">
+      <h2 class="text-center mb-5">Our Favorites:</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 ">
+
+          <!-- Product Cards -->
+          <div class="col mb-4">
+              <div class="hovereffect">
+                  <img src="media/Kombucha_piña.png" class="img-fluid rounded" alt="Bottle of Pineapple Kombucha">
+                  <div class="overlay">
+                      <h2>Pineapple Kombucha</h2>
+                      <button class="info btn btn-light" data-bs-toggle="modal" data-bs-target="#modal1">Info</button>
+                  </div>
+              </div>
+          </div>
 
             <!-- Ginger Kombucha -->
-            <div class="col">
+            <div class="col mb-4">
                 <div class="hovereffect">
                     <img src="media/Kombucha_jengibre.png" class="img-fluid rounded" alt="Bottle of Ginger Kombucha">
                     <div class="overlay">
@@ -122,7 +131,7 @@
             </div>
 
             <!-- Pitahaya Kombucha -->
-            <div class="col">
+            <div class="col mb-4">
                 <div class="hovereffect">
                     <img src="media/Kombucha_pitahaya.png" class="img-fluid rounded" alt="Bottle of Pitahaya Kombucha">
                     <div class="overlay">
@@ -133,7 +142,7 @@
             </div>
 
             <!-- Watermelon Kombucha -->
-            <div class="col">
+            <div class="col mb-4">
                 <div class="hovereffect">
                     <img src="media/Kombucha_sandia.png" class="img-fluid rounded" alt="Bottle of Watermelon Kombucha">
                     <div class="overlay">
@@ -144,7 +153,7 @@
             </div>
 
             <!-- Berry Kombucha -->
-            <div class="col">
+            <div class="col mb-4">
                 <div class="hovereffect">
                     <img src="media/Kombucha_frutos.png" class="img-fluid rounded" alt="Bottle of Berry Kombucha">
                     <div class="overlay">
@@ -155,7 +164,7 @@
             </div>
 
             <!-- Lemon Kombucha -->
-            <div class="col">
+            <div class="col mb-4">
                 <div class="hovereffect">
                     <img src="media/Kombucha_limon.png" class="img-fluid rounded" alt="Bottle of Lemon Kombucha">
                     <div class="overlay">
@@ -471,12 +480,11 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="#">Cart</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
   </div>
 
 <!-- FOOTER -->
-
 <footer class="text-center text-lg-start text-white" style="background-color: #333" data-scroll-section>
   <div class="container p-5 pb-3">
       <div class="row justify-content-center">

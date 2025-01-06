@@ -172,7 +172,11 @@ html.has-scroll-dragging {
     margin: 0 auto;
     padding: 0 15px;
 }
-
+.container-product {
+    min-height: 100vh;  /* Changed from height to min-height */
+    padding: 2rem 0;
+    overflow-y: auto;   /* Allow scrolling if content is too long */
+}
 .gallery-section h2 {
     font-size: 2.5rem;
     font-weight: bold;
@@ -518,78 +522,87 @@ body {
 
     }
 
- /* Image Slider Section */
- .img-section {
+  /* Image Slider Section */
+  .img-section {
     min-height: auto;
-    padding: 2rem 0;
+    padding: 4rem 0;
 }
 
-.img-section .row {
-    min-height: auto;
-    flex-direction: column;
+    .img-section .row {
+        display: flex;
+        flex-direction: column !important; /* Force column direction */
+    }
 
-}
+    .image-slider {
+        height: 300px;
+        width: 100%;
+        margin: 0 auto 2rem auto;
+    }
 
-.img-section .col-12 {
-    height: auto !important;
-    margin-bottom: 2rem;
-}
+    .image-slider img {
+        border-radius: 15px;
+        opacity: 0;
+    }
 
-.image-slider {
-    position: relative;
-    height: 300px;
-    width: 95%;
-    margin-bottom: 2rem;
-}
+    .image-slider img.active {
+        opacity: 1;
+    }
 
-.image-slider img {
-    transition: opacity 1s ease-in-out;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-} 
-
-.img-section .row {
-    flex-direction: column;
-}
-
-
-
-    /* Gallery Section */
-    .gallery-section {
+    /* Text Animation Container */
+    .text-animation-container {
+        height: auto !important;
         padding: 2rem 0;
     }
 
-    .gallery-section .row {
-       margin: 0;
-        gap: 1rem;
+    .text-left {
+        text-align: center;
     }
 
+    .ml10 {
+        font-size: 2.5rem;
+        margin-bottom: -20px !important;
+        text-align: center;
+    }
+
+
+
+
+     /* Gallery/Products Section */
+     .container-product{
+        height: 88vh;
+        
+     }
+
+
+     .gallery-section .row {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-bottom: 2rem;  
+    }
+
+    
+
     .gallery-section .col {
-        flex: 0 0 100%;
-        max-width: 100%;
+        width: 100%;
+        padding: 0 1rem;
+        margin-bottom: 2rem;  /* Add margin between items */
+
     }
 
     .hovereffect {
-        max-width: 100%;
-        height: auto;
-        aspect-ratio: 1;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        aspect-ratio: 1;        margin-bottom: 1rem;  /* Add space between products */
+
+
     }
 
-   
-    /* Text Animation */
-    .ml10 {
-        margin-top: 2rem;
-        font-size: 3rem;
-        margin-bottom: -30px !important;
-    }
-
-    .text-left {
-        padding: 1rem;
+    .hovereffect img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     .letters {
