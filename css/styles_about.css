@@ -568,7 +568,7 @@ body {
 
      /* Gallery/Products Section */
      .container-product{
-        height: 88vh;
+        height: auto;
         
      }
 

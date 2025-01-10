@@ -68,9 +68,11 @@ section {
 }
 
 .section2 {
-    background: white;;
+    background: white;
     position: relative;
+    height: 100vh;
 }
+
 
 .scroll-text {
     position: absolute;
